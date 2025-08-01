@@ -3,10 +3,36 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Ticket Fast{% endblock %}</title>
     <link href="/static/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        .btn-comprar {
+            display: block;
+            margin: 40px auto;
+            padding: 20px 60px;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            background: #0074D9;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            animation: pulse 1.5s infinite;
+            transition: background 0.2s;
+        }
+        .btn-comprar:hover {
+            background: #005fa3;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 #0074D980; }
+            70% { box-shadow: 0 0 0 20px #0074D900; }
+            100% { box-shadow: 0 0 0 0 #0074D980; }
+        }
+    </style>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4034356860282234" crossorigin="anonymous"></script>
 </head>
@@ -15,16 +41,15 @@
     <header>
         <div class="header">
             <div class="header-content">
-
-
                 <h1 class="site-title">
-                    <a href="/" class="strong-text">Caio-GPT</a>
+                    <a href="/" class="strong-text">Ticket Fast</a>
                 </h1>
             </div>
         </div>
     </header>
 
     <main>
+        <button class="btn-comprar" onclick="location.href='/comprar'">Comprar Ticket</button>
         {% block main %}{% endblock %}
     </main>
 
