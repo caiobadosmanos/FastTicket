@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ticket Fast
+{% endblock %}
+
+{% block main %}
+<style>
+    .nope-section {
+        max-width: 500px;
+        margin: 60px auto;
+        background: #fff3f3;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(255,77,77,0.10);
+        padding: 32px 24px;
+        font-family: 'Poppins', Arial, sans-serif;
+        text-align: center;
+    }
+    .nope-section h2 {
+        color: #ff4d4d;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+    .nope-section p {
+        font-size: 1.2rem;
+        color: #a70000;
+        margin-bottom: 12px;
+    }
+    .nope-section .voltar-btn {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 14px 38px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+        background: #0074D9;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        animation: pulse 1.5s infinite;
+        transition: background 0.2s;
+        text-decoration: none;
+    }
+    .nope-section .voltar-btn:hover {
+        background: #005fa3;
+    }
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 #0074D980; }
+        70% { box-shadow: 0 0 0 20px #0074D900; }
+        100% { box-shadow: 0 0 0 0 #0074D980; }
+    }
+</style>
+<section class="nope-section">
+    <h2>Tickets Esgotados</h2>
+    <p>Acabaram os tickets, volte outro dia.</p>
+    <a href="/" class="voltar-btn">Voltar para o início</a>
+</section>
+{% endblock %}
