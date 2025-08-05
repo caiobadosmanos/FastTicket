@@ -25,7 +25,10 @@ def comprar():
         return render_template("Nope.html") 
             
     return render_template("comprar.html",valor =valor )
-    
+@app.route("/info" )
+def info():
+
+    return render_template("info.html")
 
 @app.route("/contatos", methods=["GET", "POST"])
 def contatos():
