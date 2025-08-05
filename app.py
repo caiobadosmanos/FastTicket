@@ -21,8 +21,11 @@ def comprar():
     for ticket in tickets:
         if ticket["use"] == "no":
             valor =ticket["valor"]
+            db.execute("UPDATE tickets SET use = ? WHERE id = ?","yes", ticket["id"])
     if valor is None:
         return render_template("Nope.html") 
+    
+
             
     return render_template("comprar.html",valor =valor )
 @app.route("/info" )
