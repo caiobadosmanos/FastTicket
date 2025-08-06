@@ -10,3 +10,4 @@ def adicionar_ticket(valor):
     )
     print(f"Ticket adicionado: valor={valor}")
 
+adicionar_ticket(input("Digite o valor do ticket: "))
